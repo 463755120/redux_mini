@@ -1,5 +1,5 @@
 
-import { createStore } from 'redux'
+import { createStore } from './mini-redux'
 
 // 这就是reducer处理函数，参数是状态和新的action
 function counter(state=0, action) {
