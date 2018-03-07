@@ -14,3 +14,17 @@ export function createStore(reduxer){
     dispatch({type:'@zhigang/mini-redux'})
     return {getState,subscribe,dispatch}
 }
+// addGun(参数)
+// dispatch(addGun(参数))
+//把creator绑定监听函数
+const bindActionCreator = (creator,dispatch)=>{
+    return (...args) => dispatch(creator(...args))
+}
+export function bindActionCreators(creators,dispatch){
+    let bound = []
+    Object.keys(creators).forEach(v=>{
+        let creactor = creators[v]
+        bound = bindActionCreator(creactor,dispatch)
+    })
+    return bound
+}

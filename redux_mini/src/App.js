@@ -1,5 +1,5 @@
 import React from 'react'
-import { connect } from './woniu-react-redux'
+import { connect } from './mini-react-redux'
 import { addGun, removeGun, addGunAsync,addTwice } from './index.redux'
 
 // 装饰器模式

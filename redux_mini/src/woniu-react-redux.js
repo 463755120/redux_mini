@@ -12,6 +12,7 @@ export const connect = (mapStateToProps=state=>state,mapDispatchToProps={})=>(Wr
 			this.state = {
 				props:{}
 			}
+			console.log(context)
 		}
 		componentDidMount(){
 			const {store} = this.context
