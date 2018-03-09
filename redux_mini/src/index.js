@@ -4,7 +4,7 @@ import { createStore,applyMiddleware} from './woniu-redux'
 import thunk from './woniu-redux-thunk'
 import arrThunk from './woniu-redux-array'
 import { counter } from './index.redux'
-import { Provider } from './mini-react-redux';
+import { Provider } from './woniu-react-redux';
 import App from './App'
 import Demo from'./demo2'
 
@@ -13,8 +13,7 @@ ReactDOM.render(
   (
     <Provider store={store}>
       <App />
-    </Provider>
-   
+    </Provider>  
   ),
   document.getElementById('root'))
 

@@ -22,6 +22,7 @@ export const connect = (mapStateToProps=state=>state,mapDispatchToProps={})=>(Wr
 		update(){
 			const {store} = this.context
 			const stateProps = mapStateToProps(store.getState())
+			
 			const dispatchProps = bindActionCreators(mapDispatchToProps, store.dispatch)
 			this.setState({
 				props:{

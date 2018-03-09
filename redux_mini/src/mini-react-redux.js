@@ -31,11 +31,13 @@ export const connect = (mapStateToProps = state => state, mapDispatchToProps = {
             const { store } = this.context
             //获取store里当前所有的状态（state）,给到mapStateToProps
             const stateProps = mapStateToProps(store.getState())
+            const dispatchProps = bindActionCreators(mapDispatchToProps,store.dispatch)
             //从state获取的props和本身的props融合在一起
             this.setState({
                 props: {
-                    ...stateProps,
-                    ...this.setState.props
+                    ...this.state.props,
+                    ...stateProps,                   
+                    ...dispatchProps
                 }
             })
         }
